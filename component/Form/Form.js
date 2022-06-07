@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { setForm } from '../../store/formSlice';
 import { getTopTrack } from '../../store/topTrackSlice';
+import styles from './Form.module.css'
 
 const Form = () => {
  
@@ -45,12 +46,13 @@ const Form = () => {
     return (
        
         <section>
-            <form onSubmit={handleSubmit(onSubmit)} >
-                <div >
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+                <div className={styles.inputWrapper} >
                     <input
                         {...register('country', {
                             required: true,
                         })}
+                        className={styles.input}
                         name="country"
                         type="text"
                         placeholder="Country name"
@@ -81,7 +83,7 @@ const Form = () => {
                     </div>
                 )} */}
 
-                <button type="submit" >
+                <button type="submit" className={styles.button}>
                     Submit
                 </button>
             </form>

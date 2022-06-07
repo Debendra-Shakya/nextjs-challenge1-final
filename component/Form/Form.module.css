@@ -1,0 +1,20 @@
+.inputWrapper{
+    display: flex;
+    justify-content: center;
+    margin:20px 0;
+
+}
+.input{
+    height: 30px;
+margin:0 12px;
+padding:4px 0 4px 8px;
+}
+
+.button{
+    margin-left: 49%;
+    margin-bottom: 30px;
+}
+.form{
+    /* display: flex; */
+    align-items: center;
+}

@@ -1,12 +1,13 @@
 import Head from 'next/head';
+import styles from './Header.module.css'
 
 const Header = ({ title }) => {
     return (
         <header>
-            <Head>
-                <title>{title}</title>
+            <Head >
+                <title >{title}</title>
             </Head>
-            <h1>{title}</h1>
+            <h1 className={styles.headTitle}>{title}</h1>
         </header>
     );
 };
