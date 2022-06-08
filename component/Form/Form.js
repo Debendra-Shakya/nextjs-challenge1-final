@@ -11,7 +11,7 @@ const Form = () => {
     const {
         register,
         handleSubmit,
-        // formState: { errors },
+        formState: { errors },
     } = useForm();
     
     
@@ -72,7 +72,7 @@ const Form = () => {
                         placeholder="Top Number"
                     />
                 </div>
-                {/* {errors.country && (
+                {errors.country && (
                     <div >
                         Country name must be required
                     </div>
@@ -81,7 +81,7 @@ const Form = () => {
                     <div >
                         Numbers must be between 0-50
                     </div>
-                )} */}
+                )}
 
                 <button type="submit" className={styles.button}>
                     Submit

@@ -9,8 +9,8 @@ export const formSlice = createSlice({
   initialState,
   reducers: {
     setForm: (state, action) => {
-      state.country = [...state.country, action.payload];
-      state.topNumber = [...state.topNumber, action.payload];
+      state.country =  action.payload.country;
+      state.topNumber = action.payload.topNumber;
     },
   },
 });
