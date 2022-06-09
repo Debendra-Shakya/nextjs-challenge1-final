@@ -24,8 +24,9 @@ export const getTopTrack=(form)=>async(dispatch)=>
       console.log(data.tracks.track)
       dispatch(trackSuccess(data.tracks.track.slice(0,form.topNumber)))
       return data.tracks.track;
-    } catch (error) {
+    } catch  {
       // rejectWithValue(error.response.data);
+      
       dispatch(trackError(`😔\u00A0\u00A0No data found for ${form.country.toUpperCase()} `))
     }
   //   finally {
@@ -48,6 +49,7 @@ export const topTrackSlice = createSlice({
     },
     trackError: (state, action) => {
       state.data=[];
+      state.isLoading=false;
       state.error =  action.payload;
     },
   },

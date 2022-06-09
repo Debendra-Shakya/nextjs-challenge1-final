@@ -1,7 +1,8 @@
 import Loader from 'react-loader-spinner';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 const Spinner = () => {
     return (
-        <div className={'flex justify-center content-center pt-20 h-96'}>
+        <div >
             <Loader
                 type="Audio"
                 color="#000"

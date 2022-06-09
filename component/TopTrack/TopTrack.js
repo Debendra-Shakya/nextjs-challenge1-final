@@ -4,6 +4,7 @@ import Spinner from '../Spinner/Spinner';
 import Highcharts from 'highcharts';
 import HighchartsExporting from 'highcharts/modules/exporting';
 import HighchartsReact from 'highcharts-react-official';
+import { trackError } from '../../store/topTrackSlice';
 
 if (typeof Highcharts === 'object') {
     HighchartsExporting(Highcharts);
@@ -138,9 +139,11 @@ useEffect(() => {
 return (
    <div>
        {isLoading ? (
-          "hello"
-         //   <Spinner />
-       ) : error ? null : (
+          "isloading"
+        //    <Spinner />
+       ) : error ? (
+           <h1>{error}</h1>
+       ): (
            <HighchartsReact highcharts={Highcharts} options={options} />
        )}
        {/* <div>{JSON.stringify(value)}</div> */}
