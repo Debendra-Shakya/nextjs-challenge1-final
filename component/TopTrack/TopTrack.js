@@ -142,7 +142,7 @@ return (
           "isloading"
         //    <Spinner />
        ) : error ? (
-           <h1>{error}</h1>
+           <h1 style={{textAlign:'center'}}>{error}</h1>
        ): (
            <HighchartsReact highcharts={Highcharts} options={options} />
        )}
