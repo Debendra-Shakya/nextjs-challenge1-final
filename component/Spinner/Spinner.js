@@ -1,10 +1,10 @@
-import Loader from 'react-loader-spinner';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import {Audio} from 'react-loader-spinner';
+import styles from './Spinner.module.css'
 const Spinner = () => {
     return (
-        <div >
-            <Loader
-                type="Audio"
+        <div className={styles.spinnerWrapper}>
+            <Audio
+               
                 color="#000"
                 height={50}
                 width={50}

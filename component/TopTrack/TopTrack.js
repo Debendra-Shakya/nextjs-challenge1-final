@@ -139,8 +139,8 @@ useEffect(() => {
 return (
    <div>
        {isLoading ? (
-          "isloading"
-        //    <Spinner />
+        //   "isloading"
+           <Spinner />
        ) : error ? (
            <h1 style={{textAlign:'center'}}>{error}</h1>
        ): (
