@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from './Header.module.css'
+import { Headers } from './HeaderStyles';
 
 const Header = ({ title }) => {
     return (
@@ -7,7 +8,7 @@ const Header = ({ title }) => {
             <Head >
                 <title >{title}</title>
             </Head>
-            <h1 className={styles.headTitle}>{title}</h1>
+            <Headers>{title}</Headers>
         </header>
     );
 };

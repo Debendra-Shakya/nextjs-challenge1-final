@@ -1,18 +1,18 @@
 
 import Form from "../component/Form/Form";
-// import TopArtist from '../components/TopArtist';
-// import TopTracks from '../components/TopTracks';
 import Header from '../component/Header/Header';
 import TopTrack from "../component/TopTrack/TopTrack";
+import { Container } from "../styles/globalStyles";
 
 
 export default function Home() {
-    return (<>
+    return (<Container>
             <Header title={'📈\u00A0\u00A0HIGHCHART CHALLENGE'} />
+            <hr/>
             <Form />
             <TopTrack />
            
-            </>
+            </Container>
         
     );
 }
