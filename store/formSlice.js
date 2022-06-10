@@ -9,7 +9,7 @@ export const formSlice = createSlice({
   initialState,
   reducers: {
     setForm: (state, action) => {
-      state.country =  action.payload.country;
+      state.country = action.payload.country;
       state.topNumber = action.payload.topNumber;
     },
   },
