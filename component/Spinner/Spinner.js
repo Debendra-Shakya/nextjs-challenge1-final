@@ -1,16 +1,16 @@
 import {Audio} from 'react-loader-spinner';
-import styles from './Spinner.module.css'
+import {SpinnerWrapper}from './SpinnerStyles';
 const Spinner = () => {
     return (
-        <div className={styles.spinnerWrapper}>
+        <SpinnerWrapper>
             <Audio
                
                 color="#000"
-                height={50}
+                height={100}
                 width={50}
                 timeout={5000}
             />
-        </div>
+        </SpinnerWrapper>
     );
 };
 

@@ -3,7 +3,8 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { setForm } from '../../store/formSlice';
 import { getTopTrack } from '../../store/topTrackSlice';
-import styles from './Form.module.css'
+import { Section } from '../../styles/globalStyles';
+import { Forms,InputWrapper,Input,Error,Button} from './FormStyles';
 
 const Form = () => {
  
@@ -45,21 +46,20 @@ const Form = () => {
   
     return (
        
-        <section>
-            <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-                <div className={styles.inputWrapper} >
-                    <input
+        <Section inverse="a" padding="0">
+            <Forms onSubmit={handleSubmit(onSubmit)}>
+                <InputWrapper >
+                    <Input
                         {...register('country', {
                             required: true,
                         })}
-                        className={styles.input}
                         name="country"
                         type="text"
                         placeholder="Country name"
                         defaultValue={INITIAL_COUNTRY}
                     />
 
-                    <input
+                    <Input
                         {...register('topNumber', {
                             required: true,
                             min: 1,
@@ -71,23 +71,23 @@ const Form = () => {
                         defaultValue={INITIAL_TOP_NUMBER}
                         placeholder="Top Number"
                     />
-                </div>
+                </InputWrapper>
                 {errors.country && (
-                    <div >
+                    <Error >
                         Country name must be required
-                    </div>
+                    </Error>
                 )}
                 {errors.topNumber && (
-                    <div >
+                    <Error >
                         Numbers must be between 0-50
-                    </div>
+                    </Error>
                 )}
 
-                <button type="submit" className={styles.button}>
+                <Button type="submit">
                     Submit
-                </button>
-            </form>
-        </section>
+                </Button>
+            </Forms>
+        </Section>
     );
 };
 
